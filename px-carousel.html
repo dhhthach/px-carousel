@@ -1,0 +1,40 @@
+<!--
+    Relative paths assume component is being run from inside an app or another component, where dependencies are flat
+    siblings. When this component is run from its own repo (e.g. tests, examples), we assume the server is started with
+    'gulp serve' (or similar server setup) to enable correct finding of bower dependencies for local runs.
+-->
+<link rel="import" href="../polymer/polymer.html"/>
+<!--<link rel="import" href="../px-icon-set.html" />-->
+<!--<link rel="import" href="../px-icon.html" />-->
+
+<link rel="import" href="css/px-carousel-styles.html">
+
+<!--
+REPLACE THIS TEXT WITH A COMPONENT DESCRIPTION
+
+### Usage
+
+    <px-carousel counter-value="1"></px-carousel>
+
+@element px-carousel
+@blurb REPLACE THIS TEXT WITH A COMPONENT DESCRIPTION
+@homepage index.html
+@demo index.html
+-->
+
+<dom-module id="px-carousel">
+  <template>
+    <style include="px-carousel-styles"></style>
+    <div id="px-carousel-wrapper">
+      <div class="px-carousel-container flex flex--row">
+        <content></content>
+      </div>
+      <div class="px-carousel-control">
+        <px-icon icon="px-utl:chevron-left"></px-icon>
+        <px-icon icon="px-utl:chevron-right" style="right: 0"></px-icon>
+      </div>
+      <div class="px-carousel-dots"></div>
+    </div>
+  </template>
+</dom-module>
+<script src="dist/px-carousel.js"></script>
